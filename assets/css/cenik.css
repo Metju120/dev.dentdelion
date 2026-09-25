@@ -1,0 +1,63 @@
+.price-page { background: #fff; }
+.price-hero { padding: 74px 68px 60px; text-align: center; background: #fff; }
+.price-hero h1 { margin: 4px 0 14px; color: var(--ink); font-size: clamp(45px, 6vw, 66px); line-height: 1.05; }
+.price-hero > p:not(.eyebrow) { max-width: 760px; margin: 0 auto; color: #555; font-size: 18px; line-height: 1.65; }
+.price-information { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(300px, .75fr); gap: 12px; padding: 0 68px 68px; background: #fff; }
+.price-information-main { padding: 42px 46px; background: #f3f3f1; }
+.price-information-main h2 { margin: 4px 0 17px; color: var(--turquoise-dark); font-size: clamp(27px, 3vw, 38px); line-height: 1.18; }
+.price-information-main p:not(.eyebrow) { margin: 0 0 13px; color: #505050; font-size: 14px; line-height: 1.7; }
+.price-information-main p:last-child { margin-bottom: 0; }
+.price-notice { padding: 42px 38px; color: #fff; background: var(--turquoise-dark); }
+.price-notice h2 { margin: 0 0 16px; color: var(--yellow); font-size: 24px; line-height: 1.2; }
+.price-notice p { margin: 0 0 14px; color: rgb(255 255 255 / .87); font-size: 14px; line-height: 1.7; }
+.price-notice p:last-child { margin-bottom: 0; }
+.price-list-section { padding: 68px; scroll-margin-top: 145px; background: #fff; }
+.price-list-section-soft { background: #f3f3f1; }
+.price-group-heading { margin-bottom: 28px; text-align: center; }
+.price-group-heading h2 { margin: 3px 0 0; color: var(--ink); font-size: clamp(31px, 4vw, 46px); line-height: 1.15; }
+.price-list { display: grid; gap: 12px; }
+.price-item { padding: 34px 38px 32px; border: 1px solid #e1e1df; background: #fff; }
+.price-item-highlight { border-top: 5px solid var(--yellow); }
+.price-item-endodontics { border-left: 5px solid var(--turquoise-dark); }
+.price-item-heading { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 30px; align-items: start; }
+.price-label { margin: 0 0 4px; color: #a87800; font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.price-item h3 { margin: 0; color: var(--turquoise-dark); font-size: clamp(21px, 2.5vw, 29px); line-height: 1.25; }
+.price-value { white-space: nowrap; color: var(--ink); font-size: clamp(23px, 2.8vw, 32px); font-weight: 800; line-height: 1.2; }
+.price-value small { color: #666; font-size: 13px; font-weight: 600; text-transform: uppercase; }
+.price-duration { width: fit-content; margin: 13px 0 2px; padding: 5px 10px; color: var(--turquoise-dark); background: #e8f4f4; font-size: 11px; font-weight: 700; }
+.price-details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 28px; margin: 19px 0 0; padding: 18px 0 0; border-top: 1px solid #e5e5e3; list-style: none; }
+.price-details li { position: relative; padding-left: 19px; color: #505050; font-size: 13px; line-height: 1.55; }
+.price-details li::before { position: absolute; top: .48em; left: 0; width: 8px; height: 8px; border-radius: 50%; background: var(--yellow); content: ""; }
+.price-list-note { margin: 20px 0 0; padding: 18px 22px; color: #565656; border-left: 4px solid var(--yellow); background: #fff; font-size: 13px; line-height: 1.6; }
+.price-cta { display: flex; align-items: center; justify-content: space-between; gap: 42px; padding: 42px 68px; color: #fff; background: linear-gradient(90deg, #09686d, #0a777a); }
+.price-cta .eyebrow { color: var(--yellow); }
+.price-cta h2 { margin: 3px 0 8px; font-size: clamp(27px, 3vw, 39px); line-height: 1.18; }
+.price-cta p:not(.eyebrow) { max-width: 720px; margin: 0; color: rgb(255 255 255 / .82); font-size: 14px; }
+.price-cta .button { flex: 0 0 auto; }
+
+@media (max-width: 980px) {
+  .price-hero { padding: 60px 40px 50px; }
+  .price-information { grid-template-columns: 1fr; padding: 0 40px 52px; }
+  .price-list-section { padding: 52px 40px; }
+  .price-cta { padding: 40px; }
+}
+
+@media (max-width: 760px) {
+  .price-hero { padding: 46px 20px 42px; }
+  .price-hero > p:not(.eyebrow) { font-size: 16px; }
+  .price-information { padding: 0 20px 40px; }
+  .price-information-main, .price-notice { padding: 32px 27px; }
+  .price-list-section { padding: 40px 20px; }
+  .price-item { padding: 29px 26px 27px; }
+  .price-item-heading { grid-template-columns: 1fr; gap: 12px; }
+  .price-value { white-space: normal; }
+  .price-details { grid-template-columns: 1fr; }
+  .price-cta { flex-direction: column; align-items: flex-start; gap: 23px; padding: 36px 20px; }
+}
+
+@media (max-width: 480px) {
+  .price-hero h1 { font-size: 42px; }
+  .price-item h3 { font-size: 21px; }
+  .price-value { font-size: 25px; }
+  .price-cta .button { width: 100%; }
+}

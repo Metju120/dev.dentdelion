@@ -1,0 +1,100 @@
+:root { --turquoise: #4aa6ab; --turquoise-dark: #2e686b; --turquoise-deep: #2e686b; --yellow: #ffcc06; }
+.motto strong { color: var(--yellow); }
+.motto span { color: var(--turquoise); }
+.main-nav, .nav-links { background: var(--turquoise); }
+.nav-links a.active { background: var(--turquoise-dark); }
+.contact-card.hours { background: var(--turquoise); }
+.contact-card.info { background: var(--turquoise-dark); }
+
+.performance-page { background: #fff; }
+.performance-hero { padding: 58px 44px 52px; text-align: center; background: #fff; }
+.performance-hero h1 { max-width: 880px; margin: 5px auto 17px; color: var(--ink); font-size: clamp(34px, 3.6vw, 46px); line-height: 1.1; }
+.performance-hero > p:not(.eyebrow) { max-width: 790px; margin: 0 auto; color: #555; font-size: 16px; line-height: 1.62; }
+.performance-index { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 34px; }
+.performance-index a { padding: 11px 18px; border: 1px solid var(--turquoise); color: var(--turquoise-dark); font-size: 13px; font-weight: 700; letter-spacing: .025em; text-decoration: none; text-transform: uppercase; transition: color .18s ease, background .18s ease, border-color .18s ease; }
+.performance-index a:hover, .performance-index a:focus-visible { border-color: var(--turquoise-dark); color: #fff; background: var(--turquoise-dark); }
+.performance-section { padding: 55px 44px; scroll-margin-top: 145px; }
+.endodontics-section { background: #f3f3f1; }
+.opinion-section { background: #fff; }
+.reconstruction-section { background: #f3f3f1; }
+.performance-lead { display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr); align-items: stretch; background: #fff; }
+.performance-lead-reverse { grid-template-columns: minmax(0, .98fr) minmax(0, 1.02fr); }
+.performance-copy { display: flex; flex-direction: column; justify-content: center; padding: 40px 42px; }
+.performance-copy h2 { margin: 4px 0 16px; color: var(--turquoise-dark); font-size: clamp(28px, 3vw, 38px); line-height: 1.14; }
+.performance-copy p:not(.eyebrow) { margin: 0 0 14px; color: #505050; font-size: 14px; line-height: 1.62; }
+.performance-copy p:last-child { margin-bottom: 0; }
+.clinical-figure { position: relative; min-height: 390px; margin: 0; overflow: hidden; background: #ddd; }
+.clinical-figure img { display: block; width: 100%; height: 100%; min-width: 0; min-height: 0; object-fit: cover; }
+.clinical-figure figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 7px 12px; color: #fff; background: rgb(0 0 0 / .58); font-size: 10px; line-height: 1.35; }
+.clinical-figure-dark figcaption { background: rgb(0 0 0 / .68); }
+.treatment-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
+.treatment-panel { position: relative; min-height: 330px; padding: 34px 30px 31px; overflow: hidden; border-top: 5px solid var(--yellow); background: #fff; }
+.panel-number { display: block; margin-bottom: 22px; color: #d9d9d7; font-size: 42px; font-weight: 800; line-height: 1; }
+.treatment-panel h3 { margin: 0 0 13px; color: var(--turquoise-dark); font-size: 20px; line-height: 1.25; }
+.treatment-panel p { margin: 0; color: #515151; font-size: 13px; line-height: 1.6; }
+.technology-panel { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); margin-top: 12px; color: #fff; background: var(--turquoise-dark); }
+.technology-copy { display: flex; flex-direction: column; justify-content: center; padding: 44px 46px; }
+.technology-copy .eyebrow { color: var(--yellow); }
+.technology-copy h3 { margin: 4px 0 17px; font-size: clamp(26px, 2.8vw, 34px); line-height: 1.16; }
+.technology-copy p:not(.eyebrow) { margin: 0 0 14px; color: rgb(255 255 255 / .84); font-size: 13px; line-height: 1.62; }
+.technology-copy p:last-child { margin-bottom: 0; }
+.process-block { margin-top: 12px; padding: 42px 40px 38px; background: #fff; }
+.subheading { margin-bottom: 27px; text-align: center; }
+.subheading h3 { margin: 3px 0 0; color: var(--ink); font-size: clamp(25px, 2.8vw, 34px); line-height: 1.2; }
+.process-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; margin: 0; padding: 0; list-style: none; counter-reset: process; }
+.process-grid li { position: relative; padding-top: 42px; color: #555; font-size: 12px; line-height: 1.55; counter-increment: process; }
+.process-grid li::before { position: absolute; top: 0; left: 0; color: var(--yellow); font-size: 31px; font-weight: 800; line-height: 1; content: "0" counter(process); }
+.process-grid strong { display: block; margin-bottom: 7px; color: var(--turquoise-dark); font-size: 14px; line-height: 1.3; }
+.process-grid span { display: block; }
+.process-note { margin: 27px 0 0; padding-top: 18px; color: #666; border-top: 1px solid var(--line); font-size: 12px; text-align: center; }
+.check-list { display: grid; gap: 8px; margin: 5px 0 19px; padding: 0; list-style: none; }
+.check-list li { position: relative; padding-left: 23px; color: #4d4d4d; font-size: 13px; line-height: 1.55; }
+.check-list li::before { position: absolute; top: .48em; left: 0; width: 9px; height: 9px; border-radius: 50%; background: var(--yellow); content: ""; }
+.restoration-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
+.restoration-grid article { padding: 31px 30px 30px; border-left: 4px solid var(--yellow); background: #fff; }
+.restoration-grid h3 { margin: 0 0 11px; color: var(--turquoise-dark); font-size: 19px; line-height: 1.25; }
+.restoration-grid p { margin: 0; color: #515151; font-size: 13px; line-height: 1.6; }
+.performance-cta { display: flex; align-items: center; justify-content: space-between; gap: 42px; padding: 38px 44px; color: #fff; background: var(--turquoise-dark); }
+.performance-cta .eyebrow { color: var(--yellow); }
+.performance-cta h2 { margin: 3px 0 8px; font-size: clamp(25px, 2.8vw, 34px); line-height: 1.18; }
+.performance-cta p:not(.eyebrow) { max-width: 720px; margin: 0; color: rgb(255 255 255 / .82); font-size: 13px; }
+.performance-cta .button { flex: 0 0 auto; }
+
+@media (max-width: 980px) {
+  .performance-hero { padding: 52px 40px 46px; }
+  .performance-section { padding: 48px 40px; }
+  .performance-lead, .performance-lead-reverse { grid-template-columns: 1fr; }
+  .performance-lead-reverse .performance-copy { order: 2; }
+  .performance-lead-reverse .clinical-figure { order: 1; }
+  .clinical-figure { min-height: 390px; }
+  .treatment-grid { grid-template-columns: 1fr; }
+  .treatment-panel { min-height: 0; }
+  .technology-panel { grid-template-columns: 1fr; }
+  .technology-copy { order: 2; }
+  .technology-panel .clinical-figure { order: 1; }
+  .process-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .restoration-grid { grid-template-columns: 1fr; }
+  .performance-cta { padding: 40px; }
+}
+
+@media (max-width: 760px) {
+  .performance-hero { padding: 46px 20px 42px; }
+  .performance-hero > p:not(.eyebrow) { font-size: 16px; }
+  .performance-index { display: grid; grid-template-columns: 1fr; }
+  .performance-index a { text-align: center; }
+  .performance-section { padding: 40px 20px; }
+  .performance-copy { padding: 32px 27px; }
+  .clinical-figure { min-height: 300px; }
+  .technology-copy { padding: 34px 28px; }
+  .process-block { padding: 34px 28px 31px; }
+  .restoration-grid article { padding: 28px 26px; }
+  .performance-cta { flex-direction: column; align-items: flex-start; gap: 23px; padding: 36px 20px; }
+}
+
+@media (max-width: 480px) {
+  .performance-hero h1 { font-size: 35px; }
+  .performance-copy h2 { font-size: 29px; }
+  .clinical-figure { min-height: 250px; }
+  .process-grid { grid-template-columns: 1fr; }
+  .performance-cta .button { width: 100%; }
+}
