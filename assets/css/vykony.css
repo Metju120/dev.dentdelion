@@ -28,8 +28,7 @@
   background: var(--section-bg);
   scroll-margin-top: 145px;
 }
-.opinion-section { --section-bg: #fff; --panel-bg: #f3f3f1; }
-.technology-section {
+.technology-section, .opinion-section {
   --section-bg: var(--turquoise-dark);
   --panel-bg: #24595c;
   --section-ink: #f0f6f6;
@@ -46,13 +45,13 @@
 .performance-copy h2 { margin: 4px 0 16px; color: var(--section-heading); font-size: clamp(28px, 3vw, 38px); line-height: 1.14; }
 .performance-copy p:not(.eyebrow) { margin: 0 0 14px; color: var(--section-ink); font-size: 14px; line-height: 1.65; }
 .performance-copy p:last-child { margin-bottom: 0; }
-.technology-section .eyebrow { color: var(--yellow); }
+.technology-section .eyebrow, .opinion-section .eyebrow { color: var(--yellow); }
 .clinical-figure { position: relative; min-height: 350px; margin: 0; overflow: hidden; background: #ddd; }
 .clinical-figure img { display: block; width: 100%; height: 100%; min-width: 0; min-height: 0; object-fit: cover; }
 .clinical-figure figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 7px 12px; color: #fff; background: rgb(0 0 0 / .62); font-size: 10px; line-height: 1.35; }
 
 /* Numbered and unnumbered details use the same card treatment. */
-.treatment-grid, .process-grid, .restoration-grid, .consultation-grid {
+.treatment-grid, .process-grid, .restoration-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
@@ -60,7 +59,7 @@
   padding: 0;
   list-style: none;
 }
-.treatment-panel, .process-grid li, .restoration-grid article, .consultation-grid li {
+.treatment-panel, .process-grid li, .restoration-grid article {
   min-width: 0;
   padding: 26px;
   border-top: 4px solid var(--yellow);
@@ -95,9 +94,9 @@
 .subheading h3 { margin: 0; color: var(--section-heading); font-size: 24px; line-height: 1.25; }
 .subheading .eyebrow { margin-bottom: 8px; }
 .process-note { margin: 22px 0 0; padding-top: 18px; border-top: 1px solid var(--section-line); font-size: 13px; }
-.consultation-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.consultation-grid li { display: flex; align-items: baseline; gap: 12px; }
-.consultation-grid li::before { content: ""; flex: 0 0 7px; width: 7px; height: 7px; border-radius: 50%; background: var(--turquoise-dark); }
+.opinion-section .check-list { display: grid; gap: 8px; margin: 0 0 18px; padding: 0; list-style: none; }
+.opinion-section .check-list li { position: relative; padding-left: 20px; color: var(--section-ink); font-size: 14px; line-height: 1.65; }
+.opinion-section .check-list li::before { content: ""; position: absolute; left: 0; top: .6em; width: 7px; height: 7px; border-radius: 50%; background: var(--yellow); }
 
 /* Preserve the complete clinical image and the original watermark. */
 .clinical-figure.clinical-figure-onlay { min-height: 0; display: flex; align-items: center; justify-content: center; background: #fff; }
@@ -127,8 +126,8 @@
   .performance-copy { padding: 28px; }
   .performance-index { display: grid; grid-template-columns: 1fr; }
   .performance-index a { text-align: center; }
-  .treatment-grid, .process-grid, .restoration-grid, .consultation-grid { grid-template-columns: 1fr; }
-  .treatment-panel, .process-grid li, .restoration-grid article, .consultation-grid li { padding: 24px 28px; }
+  .treatment-grid, .process-grid, .restoration-grid { grid-template-columns: 1fr; }
+  .treatment-panel, .process-grid li, .restoration-grid article { padding: 24px 28px; }
   .performance-lead .clinical-figure:not(.clinical-figure-onlay) img { height: 260px; }
   .performance-cta { flex-direction: column; align-items: flex-start; gap: 23px; padding: 32px 20px; }
 }
