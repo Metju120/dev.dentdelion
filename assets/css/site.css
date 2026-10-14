@@ -482,3 +482,46 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .team-member img { transform: none !important; }
   .services-section::before { background-attachment: scroll; }
 }
+
+/* Homepage refinements: hero treatment, compact endodontic card and contacts. */
+.homepage .hero-media {
+  filter: grayscale(1) contrast(.92) brightness(.94) blur(1px);
+}
+.homepage .service-card-featured {
+  min-height: 0;
+}
+.homepage .service-card-featured > img {
+  height: 0;
+  min-height: 100%;
+}
+.homepage .service-card-featured .service-copy {
+  padding: 28px 32px;
+}
+.homepage .contact-card {
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 14px;
+  padding: 28px 22px;
+}
+.homepage .contact-card > svg {
+  width: 45px;
+  height: 45px;
+}
+.homepage .contact-links a {
+  max-width: 100%;
+}
+.homepage .contact-links span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 760px) {
+  .homepage .service-card-featured {
+    grid-template-columns: 1fr;
+  }
+  .homepage .service-card-featured > img {
+    height: 200px;
+    min-height: 0;
+  }
+  .homepage .service-card-featured .service-copy {
+    padding: 24px;
+  }
+}
