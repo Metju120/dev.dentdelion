@@ -525,3 +525,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
     padding: 24px;
   }
 }
+
+/* Preserve the clinical crop's proportions and complete restoration. */
+.homepage .service-card > img.clinical-onlay-detail {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  min-height: 0;
+  align-self: center;
+  justify-self: center;
+  object-fit: contain;
+}
