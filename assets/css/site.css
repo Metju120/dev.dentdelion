@@ -50,7 +50,7 @@ a { color: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 .skip-link { position: fixed; left: 1rem; top: -5rem; z-index: 100; background: #fff; padding: .7rem 1rem; }
 .skip-link:focus { top: 1rem; }
-.page-shell { width: min(100%, var(--content)); margin-inline: auto; background: var(--paper); box-shadow: 0 0 28px rgb(0 0 0 / .08); }
+.page-shell { overflow-anchor: none; width: min(100%, var(--content)); margin-inline: auto; background: var(--paper); box-shadow: 0 0 28px rgb(0 0 0 / .08); }
 
 .site-header { position: sticky; z-index: 60; top: 0; background: #fff; box-shadow: 0 0 0 rgb(0 0 0 / 0); transition: box-shadow .25s ease; }
 .header-inner { min-height: 140px; display: flex; align-items: center; justify-content: space-between; padding: 22px 50px; transition: min-height .25s ease, padding .25s ease; }
