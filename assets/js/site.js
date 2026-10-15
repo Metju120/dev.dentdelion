@@ -116,7 +116,13 @@
       window.scrollY || document.documentElement.scrollTop;
 
     if (header) {
-      header.classList.toggle('is-compact', scrollTop > 40);
+      // Keep a gap wider than the header's height change, so resizing
+      // cannot immediately trigger the opposite state through scroll anchoring.
+      if (scrollTop > 120) {
+        header.classList.add('is-compact');
+      } else if (scrollTop < 16) {
+        header.classList.remove('is-compact');
+      }
     }
 
     if (hero && !reduceMotion.matches) {
