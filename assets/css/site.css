@@ -555,3 +555,39 @@ button, a { -webkit-tap-highlight-color: transparent; }
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+/* Full-width, readable weekday schedule in the contact panel. */
+.contact-card.hours {
+  grid-template-columns: 45px minmax(0, 1fr);
+  gap: 16px 14px;
+  align-content: start;
+}
+.contact-card.hours > svg { width: 45px; height: 45px; }
+.contact-card.hours > div { align-self: center; }
+.contact-card.hours h2 { margin: 0; }
+.hours-schedule {
+  grid-column: 1 / -1;
+  margin: 0;
+  width: 100%;
+}
+.hours-schedule > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 11px 0;
+  border-bottom: 1px solid rgb(255 255 255 / .27);
+}
+.hours-schedule > div:first-child { border-top: 1px solid rgb(255 255 255 / .27); }
+.hours-schedule dt { font-size: 15px; font-weight: 500; }
+.hours-schedule dd {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.4;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+@media (max-width: 360px) {
+  .hours-schedule dd { font-size: 19px; }
+}
