@@ -559,7 +559,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 /* Full-width, readable weekday schedule in the contact panel. */
 .contact-card.hours {
   grid-template-columns: 45px minmax(0, 1fr);
-  gap: 16px 14px;
+  gap: 12px 14px;
   align-content: start;
 }
 .contact-card.hours > svg { width: 45px; height: 45px; }
@@ -575,19 +575,19 @@ button, a { -webkit-tap-highlight-color: transparent; }
   justify-content: space-between;
   align-items: baseline;
   gap: 12px;
-  padding: 11px 0;
+  padding: 7px 0;
   border-bottom: 1px solid rgb(255 255 255 / .27);
 }
 .hours-schedule > div:first-child { border-top: 1px solid rgb(255 255 255 / .27); }
-.hours-schedule dt { font-size: 15px; font-weight: 500; }
+.hours-schedule dt { font-size: 14px; font-weight: 500; }
 .hours-schedule dd {
   margin: 0;
-  font-size: 21px;
-  font-weight: 800;
+  font-size: 17px;
+  font-weight: 600;
   line-height: 1.4;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
 @media (max-width: 360px) {
-  .hours-schedule dd { font-size: 19px; }
+  .hours-schedule dd { font-size: 16px; }
 }
