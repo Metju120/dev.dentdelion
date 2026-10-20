@@ -140,3 +140,9 @@
 @media (prefers-reduced-motion: reduce) {
   .performance-hero.services-section::before { transform: none; will-change: auto; }
 }
+
+/* Show the complete clinical photograph, including its subtle watermark. */
+.clinical-figure.clinical-figure-endo { min-height: 0; display: flex; align-items: center; background: #93c4ed; }
+.clinical-figure-endo a { display: block; width: 100%; }
+.performance-lead .clinical-figure.clinical-figure-endo img { height: auto; object-fit: contain; }
+.clinical-figure-endo a:focus-visible { outline: 3px solid var(--turquoise-dark); outline-offset: -3px; }
