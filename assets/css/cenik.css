@@ -61,3 +61,13 @@
   .price-value { font-size: 25px; }
   .price-cta .button { width: 100%; }
 }
+
+/* A real treatment case beside the endodontic price heading. */
+.price-group-heading-with-photo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, .8fr); align-items: center; gap: 36px; text-align: left; }
+.price-group-heading-with-photo h2 { font-size: clamp(28px, 3.3vw, 40px); }
+.price-case-photo { margin: 0; overflow: hidden; }
+.price-case-photo img { display: block; width: 100%; height: auto; }
+@media (max-width: 760px) {
+  .price-group-heading-with-photo { grid-template-columns: 1fr; gap: 24px; }
+  .price-case-photo { width: 100%; max-width: 520px; justify-self: center; }
+}

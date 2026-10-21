@@ -100,7 +100,7 @@
 .opinion-section .check-list li::before { content: ""; position: absolute; left: 0; top: .6em; width: 7px; height: 7px; border-radius: 50%; background: var(--yellow); }
 
 /* Preserve the complete clinical image and the original watermark. */
-.clinical-figure.clinical-figure-onlay { min-height: 0; display: flex; align-items: center; justify-content: center; background: #fff; }
+.clinical-figure.clinical-figure-onlay { min-height: 0; display: flex; align-items: center; justify-content: center; background: var(--panel-bg); }
 .clinical-figure-onlay a { display: block; width: 100%; max-width: 1000px; }
 .clinical-figure-onlay img { width: 100%; height: auto; object-fit: contain; }
 .clinical-figure-onlay a:focus-visible { outline: 3px solid var(--turquoise-dark); outline-offset: -3px; }
