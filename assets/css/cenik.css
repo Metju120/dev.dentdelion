@@ -71,3 +71,12 @@
   .price-group-heading-with-photo { grid-template-columns: 1fr; gap: 24px; }
   .price-case-photo { width: 100%; max-width: 520px; justify-self: center; }
 }
+
+/* Show the usual treatment total first, with the separate items below. */
+.price-amount { display: grid; justify-items: end; gap: 6px; }
+.price-includes { color: var(--turquoise-dark); font-size: 12px; font-weight: 700; line-height: 1.4; }
+.price-breakdown { margin: 16px 0 0; color: #606060; font-size: 13px; line-height: 1.6; }
+.price-extra { margin: 6px 0 0; color: #606060; font-size: 13px; line-height: 1.6; }
+@media (max-width: 760px) {
+  .price-amount { justify-items: start; }
+}
