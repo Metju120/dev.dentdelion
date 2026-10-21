@@ -146,3 +146,7 @@
 .clinical-figure-endo a { display: block; width: 100%; }
 .performance-lead .clinical-figure.clinical-figure-endo img { height: auto; object-fit: contain; }
 .clinical-figure-endo a:focus-visible { outline: 3px solid var(--turquoise-dark); outline-offset: -3px; }
+
+/* Keep the full portrait visible on desktop and mobile. */
+.clinical-figure.clinical-figure-microscope { min-height: 0; }
+.performance-lead .clinical-figure.clinical-figure-microscope img { height: auto; object-fit: contain; }
