@@ -32,7 +32,6 @@
 .privacy-note { margin:28px 0 6px; padding:21px 24px; background:var(--soft); border-left:5px solid var(--yellow); }
 .privacy-note h3 { margin:0 0 7px; color:var(--turquoise-dark); font-size:1.05rem; }
 .privacy-note p { margin:0; font-size:.96rem; }
-.privacy-note-warning { background:#fff9df; }
 .privacy-table-wrap { margin:25px 0 26px; overflow-x:auto; }
 .privacy-table { width:100%; border-collapse:collapse; font-size:.94rem; line-height:1.55; }
 .privacy-table th { padding:13px 16px; color:#fff; background:var(--turquoise-dark); text-align:left; vertical-align:top; }

@@ -15,6 +15,7 @@
   const isHomepage = currentPageName === 'index.html';
   let scrollFrame = null;
   let activeTeamButton = null;
+  let activeNavigationLink;
 
   const homeLink = navLinks.find(function (link) {
     const href = link.getAttribute('href') || '';
@@ -35,6 +36,11 @@
     .filter(Boolean);
 
   function setActiveLink(activeLink) {
+    if (activeLink === activeNavigationLink) {
+      return;
+    }
+
+    activeNavigationLink = activeLink;
     navLinks.forEach(function (link) {
       const isActive = link === activeLink;
       link.classList.toggle('active', isActive);
@@ -65,9 +71,11 @@
     });
   }
 
+  const pageNavigationLink = currentPageLink();
+
   function updateActiveNavigation(scrollTop) {
     if (!isHomepage || !sectionLinks.length) {
-      setActiveLink(currentPageLink());
+      setActiveLink(pageNavigationLink);
       return;
     }
 
