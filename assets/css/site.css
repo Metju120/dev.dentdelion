@@ -518,7 +518,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
     grid-template-columns: 1fr;
   }
   .homepage .service-card-featured > img {
-    height: 200px;
+    height: auto;
     min-height: 0;
   }
   .homepage .service-card-featured .service-copy {
