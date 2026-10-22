@@ -60,7 +60,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .motto strong { color: var(--yellow); font-weight: 600; }
 .motto span { color: var(--turquoise); }
 
-.main-nav { min-height: 66px; display: flex; align-items: stretch; padding-inline: 30px; background: var(--turquoise); color: #fff; transition: min-height .25s ease; }
+.main-nav { min-height: 66px; display: flex; align-items: stretch; padding-inline: 30px; background: #367c80; color: #fff; transition: min-height .25s ease; }
 .nav-links { display: flex; align-items: stretch; }
 .nav-links a { display: flex; align-items: center; padding: 0 24px; text-decoration: none; text-transform: uppercase; font-size: 14px; font-weight: 700; letter-spacing: .035em; transition: background .2s ease; }
 .nav-links a:hover, .nav-links a:focus-visible, .nav-links a.active { background: var(--turquoise-dark); }
@@ -78,7 +78,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero::after { position: absolute; z-index: -1; inset: 0; background: rgb(0 0 0 / .10); content: ""; }
 .hero-media { position: absolute; z-index: -2; inset: -90px 0; background: url("../images/clinic-parallax.webp") center center / cover no-repeat; transform: translate3d(0, var(--hero-parallax), 0) scale(1.01); will-change: transform; }
 .hero-copy { width: min(470px, calc(100% - 100px)); margin: 42px 50px 42px auto; padding: 40px; background: rgb(255 255 255 / .96); box-shadow: 0 12px 30px rgb(0 0 0 / .24); }
-.eyebrow { margin: 0 0 12px; color: #e6ad00; font-size: 13px; font-weight: 800; letter-spacing: .035em; text-transform: uppercase; }
+.eyebrow { margin: 0 0 12px; color: #876500; font-size: 13px; font-weight: 800; letter-spacing: .035em; text-transform: uppercase; }
 .hero h1 { margin: 0 0 12px; font-size: clamp(36px, 3.6vw, 46px); line-height: 1.06; letter-spacing: -.025em; }
 .hero h2 { margin: 0 0 20px; color: var(--turquoise-dark); font-size: clamp(22px, 2.4vw, 30px); line-height: 1.25; }
 .hero-copy > p:not(.eyebrow) { margin: 0; font-size: 17px; color: #454545; }
@@ -359,7 +359,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .contact-strip { display: grid; grid-template-columns: 1.05fr 1.12fr 1.13fr; color: #fff; scroll-margin-top: 145px; }
 .contact-card { min-height: 190px; display: grid; grid-template-columns: 60px 1fr; gap: 18px; align-items: start; padding: 34px 30px; }
 .contact-card.booking { color: #222; background: var(--yellow); }
-.contact-card.hours { background: var(--turquoise); }
+.contact-card.hours { background: #367c80; }
 .contact-card.info { background: var(--turquoise-dark); }
 .contact-card svg { width: 56px; height: 56px; fill: none; stroke: currentColor; stroke-width: 2.7; stroke-linecap: round; stroke-linejoin: round; }
 .contact-card h2 { margin: 0 0 10px; font-size: 21px; line-height: 1.25; font-weight: 700; }

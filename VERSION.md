@@ -1,22 +1,16 @@
-# Verze webu
+# Verze C
 
-| Verze | Větev | Výchozí commit | Stav |
-| --- | --- | --- | --- |
-| A | `verze-a` | `40dadb0f4ab0c3c9385cdfe58de25f92a27e84ee` | Zachovaný stav před optimalizací |
-| B | `verze-b` | Verze A | Optimalizace k porovnání a kontrole |
+Výchozí verze B: `089c5be50284eb3649ec5e5cec4edda78cbc5792`.
+Samostatná větev `verze-c`; `verze-b` zachována pro návrat.
 
-Hlavní větev `main` a její GitHub Pages náhled zůstávají při přípravě B na verzi A.
+- Vysoká priorita přednačítání úvodní fotografie.
+- Scroll skript nejprve čte rozložení a potom mění styly. Inicializace přes requestAnimationFrame.
+- Zachovány prahy kompaktní hlavičky 120/16 px a ovládání profilů.
+- Kontrast navigace a ordinačních hodin: bílá na #367c80 (4,83:1).
+- Drobné zlaté nadpisy #876500 (4,90:1 na #f4f4f3).
+- Logo bezeztrátové WebP. Portréty WebP kvalita 95, původní rozměry a alfa kanál.
+- Texty, odkazy, mapa, klinické fotografie a rozložení zachovány.
 
-## Změny B
+Kontroly: syntaxe JS, pořadí čtení/zápisů při scrollu, hystereze hlavičky, aktivní menu, shoda textů/odkazů/mapy, obrazové rozměry/alfa, pixelová shoda loga, výpočet kontrastu.
 
-- Klinické fotografie mají menší responzivní náhledy. Odkazy na plné klinické originály a vodoznaky zůstávají zachovány.
-- Portréty převedeny do bezeztrátového WebP se zachováním všech pixelů včetně průhlednosti.
-- Obrázek na hlavní stránce má nadále 459 × 156 px, s jemnou kompresí WebP.
-- Tři kontaktní ikony používají přímo SVG Font Awesome Free 7.3.1, bez externího CSS a fontů ikon. Licenční podmínky jsou v `assets/icons/LICENSE-fontawesome.txt`.
-- Všechny stránky používají shodnou verzi adres společného CSS a JavaScriptu.
-- Odstraněny nepoužívané selektory CSS a opakované zápisy aktivního menu při scrollování.
-- Mapa, paralax, texty, ceny, chování profilů a ikona koferdamu jsou zachovány.
-
-## Návrat
-
-Do sloučení B stačí ponechat `main` beze změny. Po případném sloučení použít revert příslušného PR; větev `verze-a` uchovává úplný původní stav. Starší historii není nutné přepisovat.
+Zrychlení ani nové skóre PageSpeed zatím nebylo změřeno. Po přepnutí GitHub Pages na větev verze-c je nutná vizuální kontrola a opakování mobilního měření. Příčinu celé prodlevy vykreslení úvodní fotografie zatím nelze považovat za prokázanou.

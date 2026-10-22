@@ -73,15 +73,13 @@
 
   const pageNavigationLink = currentPageLink();
 
-  function updateActiveNavigation(scrollTop) {
+  function getActiveNavigation(scrollTop) {
     if (!isHomepage || !sectionLinks.length) {
-      setActiveLink(pageNavigationLink);
-      return;
+      return pageNavigationLink;
     }
 
     if (scrollTop <= 4) {
-      setActiveLink(homeLink);
-      return;
+      return homeLink;
     }
 
     const pageBottom = scrollTop + window.innerHeight;
@@ -92,12 +90,11 @@
         return item.section.id === 'kontakt';
       });
 
-      setActiveLink(
+      return (
         contactLink
           ? contactLink.link
           : sectionLinks[sectionLinks.length - 1].link
       );
-      return;
     }
 
     const headerHeight = header
@@ -116,16 +113,22 @@
       }
     });
 
-    setActiveLink(activeLink);
+    return activeLink;
   }
 
   function updateScrollEffects() {
     const scrollTop =
       window.scrollY || document.documentElement.scrollTop;
 
+    // Read layout before any class or style writes in this frame.
+    const activeLink = getActiveNavigation(scrollTop);
+    const sectionRect = servicesSection && !reduceMotion.matches
+      ? servicesSection.getBoundingClientRect()
+      : null;
+    const viewportHeight = window.innerHeight;
+
     if (header) {
-      // Keep a gap wider than the header's height change, so resizing
-      // cannot immediately trigger the opposite state through scroll anchoring.
+      // Preserve hysteresis to prevent header-size oscillation.
       if (scrollTop > 120) {
         header.classList.add('is-compact');
       } else if (scrollTop < 16) {
@@ -135,31 +138,16 @@
 
     if (hero && !reduceMotion.matches) {
       const shift = Math.min(72, scrollTop * 0.16);
-
-      hero.style.setProperty(
-        '--hero-parallax',
-        shift.toFixed(1) + 'px'
-      );
+      hero.style.setProperty('--hero-parallax', shift.toFixed(1) + 'px');
     }
 
-    if (servicesSection && !reduceMotion.matches) {
-      const sectionRect = servicesSection.getBoundingClientRect();
-      const sectionCenter =
-        sectionRect.top + sectionRect.height / 2;
-      const viewportCenter = window.innerHeight / 2;
-      const centerOffset = sectionCenter - viewportCenter;
-      const shift = Math.max(
-        -58,
-        Math.min(58, centerOffset * -0.09)
-      );
-
-      servicesSection.style.setProperty(
-        '--services-parallax',
-        shift.toFixed(1) + 'px'
-      );
+    if (sectionRect) {
+      const centerOffset = sectionRect.top + sectionRect.height / 2 - viewportHeight / 2;
+      const shift = Math.max(-58, Math.min(58, centerOffset * -0.09));
+      servicesSection.style.setProperty('--services-parallax', shift.toFixed(1) + 'px');
     }
 
-    updateActiveNavigation(scrollTop);
+    setActiveLink(activeLink);
     scrollFrame = null;
   }
 
@@ -267,7 +255,7 @@
     }
   });
 
-  updateScrollEffects();
+  requestScrollUpdate();
 
   window.addEventListener(
     'scroll',
