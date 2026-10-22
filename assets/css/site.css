@@ -134,7 +134,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .service-card { display: grid; grid-template-columns: 46% 54%; min-height: 275px; background: #fff; overflow: hidden; }
 .service-card-featured { grid-column: 1 / -1; grid-template-columns: 42% 58%; min-height: 330px; }
 .service-card img { width: 100%; min-width: 0; height: 100%; min-height: 0; object-fit: cover; }
-.service-card-consultation img { object-position: 42% center; }
 .service-copy { display: flex; flex-direction: column; justify-content: center; padding: 25px 25px 25px 28px; }
 .service-copy .eyebrow { margin-bottom: 7px; font-size: 10px; }
 .service-copy :is(h2, h3) { margin: 0 0 10px; color: var(--turquoise-dark); font-size: 21px; line-height: 1.22; }
@@ -142,9 +141,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .service-card-featured .service-copy { padding: 34px 42px; }
 .service-card-featured .service-copy :is(h2, h3) { font-size: clamp(27px, 3vw, 36px); }
 .service-card-featured .service-copy p:not(.eyebrow) { max-width: 650px; font-size: 15px; }
-.service-points { display: grid; gap: 7px; margin: 19px 0 0; padding: 0; list-style: none; }
-.service-points li { position: relative; padding-left: 20px; color: #454545; font-size: 13px; line-height: 1.45; }
-.service-points li::before { position: absolute; top: .43em; left: 0; width: 8px; height: 8px; border-radius: 50%; background: var(--yellow); content: ""; }
 .section-action { margin-top: 24px; text-align: center; }
 
 .about-section {
@@ -374,7 +370,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .contact-links { display: grid; gap: 7px; }
 .contact-card .contact-links a { display: flex; align-items: center; gap: 9px; width: fit-content; font-weight: 500; }
-.contact-card .contact-links i { flex: 0 0 18px; width: 18px; font-size: 16px; text-align: center; }
+.contact-card .contact-links .contact-icon { flex: 0 0 18px; width: 18px; height: 16px; fill: currentColor; stroke: none; }
 
 .contact-card.info p > a { display: block; width: fit-content; margin-top: 3px; font-weight: 500; text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: rgb(255 255 255 / .45); text-underline-offset: 3px; }
 .contact-card.info p > a:first-of-type { margin-top: 7px; }
@@ -524,17 +520,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .homepage .service-card-featured .service-copy {
     padding: 24px;
   }
-}
-
-/* Preserve the clinical crop's proportions and complete restoration. */
-.homepage .service-card > img.clinical-onlay-detail {
-  width: 100%;
-  max-width: 280px;
-  height: auto;
-  min-height: 0;
-  align-self: center;
-  justify-self: center;
-  object-fit: contain;
 }
 
 /* Keep the clinic location visible alongside booking details. */

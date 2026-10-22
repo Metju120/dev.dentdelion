@@ -69,7 +69,7 @@
   font-size: 14px;
   line-height: 1.65;
 }
-.panel-number, .process-grid li::before {
+.process-grid li::before {
   display: block;
   margin-bottom: 16px;
   color: var(--section-heading);
