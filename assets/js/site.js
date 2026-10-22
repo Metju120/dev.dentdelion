@@ -203,8 +203,6 @@
       return;
     }
 
-    const panelWasHidden = teamProfilePanel.hidden;
-
     teamButtons.forEach(function (item) {
       item.setAttribute(
         'aria-expanded',
@@ -219,14 +217,19 @@
     teamProfilePanel.hidden = false;
     activeTeamButton = button;
 
-    if (panelWasHidden) {
-      window.requestAnimationFrame(function () {
-        teamProfilePanel.scrollIntoView({
-          behavior: reduceMotion.matches ? 'auto' : 'smooth',
-          block: 'nearest'
-        });
+    window.requestAnimationFrame(function () {
+      const headerHeight = header
+        ? header.getBoundingClientRect().height
+        : 0;
+      const panelTop =
+        teamProfilePanel.getBoundingClientRect().top +
+        window.scrollY - headerHeight - 16;
+
+      window.scrollTo({
+        top: Math.max(0, panelTop),
+        behavior: reduceMotion.matches ? 'auto' : 'smooth'
       });
-    }
+    });
   }
 
   if (yearElement) {
